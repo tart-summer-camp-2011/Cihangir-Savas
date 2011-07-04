@@ -13,6 +13,8 @@ interface NavyInterface {
     //put your code here
     //function dive($soldierName,$divingLocation);
      public function setAttackPower($attackPower);
+     public function dive($depth);
+     public function swim($lentgh);
 }
 
 ?>

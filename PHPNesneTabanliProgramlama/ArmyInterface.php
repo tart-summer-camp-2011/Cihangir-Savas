@@ -11,9 +11,11 @@
  */
 interface ArmyInterface {
     //put your code here
-    //function shoot($gunType,$target);
     
     public function setAttackPower($attackPower);
+    public function shoot($attackTo);
+    public function crawl($length);
+    
 }
 
 ?>
