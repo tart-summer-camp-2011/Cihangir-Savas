@@ -1,0 +1,20 @@
+Setting Up Your VHOST
+=====================
+
+
+
+<VirtualHost *:80>
+   DocumentRoot "/usr/local/zend/apache2/htdocs/product/public"
+   ServerName local.product.
+
+   # This should be omitted in the production environment
+   SetEnv APPLICATION_ENV development
+    
+   <Directory "/usr/local/zend/apache2/htdocs/ProductExample/public">
+       Options Indexes MultiViews FollowSymLinks
+       AllowOverride All
+       Order allow,deny
+       Allow from all
+   </Directory>
+    
+</VirtualHost>

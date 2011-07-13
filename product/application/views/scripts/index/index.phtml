@@ -1,0 +1,22 @@
+<?php
+$this->title = "Products";
+$this->headTitle($this->title);
+?>
+
+<p><a href="<?php echo $this->url(array('controller'=>'index','action'=>'add'));?>">Yeni Product Ekle</a></p>
+
+<table>
+    <tr>
+        <th>Name</th>
+        <th>Type</th>
+        <th>E-mail</th>
+    </tr>
+
+<?php foreach($this->products as $product) : ?>
+    <tr>
+        <td><a href="<?php echo $this->url(array('controller'=>'index','action'=>'update', 'id'=>$product->id));?>"><?php echo $this->escape($product->name);?></a></td>
+        <td><a href="<?php echo $this->url(array('controller'=>'index','action'=>'update', 'id'=>$product->id));?>"><?php echo $this->escape($product->type);?></a></td>
+        <td><a href="<?php echo $this->url(array('controller'=>'index','action'=>'update', 'id'=>$product->id));?>"><?php echo $this->escape($product->email);?></a></td>
+    </tr>
+<?php endforeach; ?>
+</table>
