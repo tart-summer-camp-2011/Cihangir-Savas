@@ -23,7 +23,7 @@ class sniffAddfriendController extends sniffController {
          $request->getValue('user')->UID,
          $request->getValue('friend')
       );
-      header('Location: /sniff/main',302);
+      header('Location: /main',302);
       die();
    }
 

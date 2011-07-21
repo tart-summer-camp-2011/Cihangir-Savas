@@ -18,7 +18,7 @@ class sniffHomeController extends sniffController {
 
    public function execute(sniffRequest $request, sniffResponse $response) {
       if ($request->getValue('user')) {
-         header('Location: /sniff/main', 302);
+         header('Location: /main', 302);
          die();
       }
       return new sniffStaticView( __DIR__ . '/../pages/homepage.xhtml');

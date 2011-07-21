@@ -17,7 +17,7 @@
             }
          ?>
         <p>
-           <a href="/sniff/profile">Watch your profile</a> | <a href="/sniff/profileeditor">Edit your profile</a>
+           <a href="/profile">Watch your profile</a> | <a href="/eeditor">Edit your profile</a>
         </p>        
     </fieldset>
     <fieldset>
@@ -25,13 +25,13 @@
          <table>
             <?php foreach($response->FRIENDS as $friend) { ?>
             <tr>
-               <td><a href="/sniff/profile?login=<?php echo $friend->USERNAME; ?>"><?php echo $friend->NAME ?></a></td>
-               <td>[ <a href="/sniff/unfriend?uid=<?php echo $friend->USERNAME; ?>">unfriend</a> ]</td>
+               <td><a href="/profile?login=<?php echo $friend->USERNAME; ?>"><?php echo $friend->NAME ?></a></td>
+               <td>[ <a href="/unfriend?uid=<?php echo $friend->USERNAME; ?>">unfriend</a> ]</td>
             </tr>
             <?php } ?>
          </table>
          <div>
-         <form action="/sniff/addfriend" method="get">
+         <form action="/addfriend" method="get">
             <input type="text" name="friend" />
             <input type="submit" value="Add!" />
          </form>

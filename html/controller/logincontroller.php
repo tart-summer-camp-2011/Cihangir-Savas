@@ -32,7 +32,7 @@ class sniffLoginController extends sniffController {
          $_SESSION['user'] =  $res->fetch_object();
          setcookie('sniffUser', serialize($_SESSION['user']),time()+60*60*24*31, '/');
       }
-      header('Location: /sniff/main',302);
+      header('Location: /main',302);
       die();
    }
 
